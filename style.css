@@ -17,6 +17,10 @@
     font-family: 'Chivo', sans-serif;
 }
 
+body {
+    background-color: #EFF6FF;
+}
+
 header {
     background: var(--background);
     text-align: center;
@@ -101,5 +105,18 @@ footer > * {
     main,
     footer > * {
         width: var(--width-mobile);
+    }
+
+    header{
+        height: 10vh;
+    }
+    main{
+        height: 70vh;
+        margin: 00.5rem auto;
+    }
+
+    footer {
+    position: static;
+    height: 20vh;
     }
 }
