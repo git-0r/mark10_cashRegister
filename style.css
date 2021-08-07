@@ -107,16 +107,7 @@ footer > * {
         width: var(--width-mobile);
     }
 
-    header{
-        height: 10vh;
-    }
-    main{
-        height: 70vh;
-        margin: 00.5rem auto;
-    }
-
     footer {
     position: static;
-    height: 20vh;
     }
 }
