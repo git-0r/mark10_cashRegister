@@ -94,4 +94,8 @@ table {
     table {
         width: 90vw;
     }
+    
+    table, th, td {
+     padding: 0.1rem;   
+    }
 }
