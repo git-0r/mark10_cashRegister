@@ -1,113 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&family=Montserrat:wght@300;400;500;700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Overlock:wght@400;700&display=swap');
 
 :root {
-    --background : linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
-    --width-mobile : 90vw;
-    --width-tablet : 70vw;
-    --width-laptop : 50vw;
+    --background-btn: linear-gradient(135deg, rgba(255,174,39,1) 0%,rgba(222,73,109,1) 100%);
+    --font: 'Overlock', cursive;
 }
 
-* {
-    box-sizing: border-box;
+
+body{
     margin: 0;
-    padding: 0;
-    font-family: 'Chivo', sans-serif;
-}
-
-body {
-    background-color: #EFF6FF;
-}
-
-header {
-    background: var(--background);
-    text-align: center;
-    padding: 0.5rem;
-}
-
-header h1 {
-    font-family: 'Style Script', cursive;
-    letter-spacing: 1rem;
+    background-color: #29539b;
+    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
 }
 
 main {
-    width: var(--width-laptop);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: var(--font);
+}
+
+h1{
+    letter-spacing: 0.3rem;
+}
+
+.card {
+    width: 350px;
+    border-radius: 10px;
+    margin: 2rem auto;
+    padding: 1rem 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bill-amount,
+.cash-received {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 1rem auto;
 }
 
-.yoda {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100px;
+.cash-received {
     display: none;
 }
 
-.translate-input {
-    width: 100%;
-    border: 2px solid black;
-    padding: 1rem;
+#bill-amount,
+#cash-received {
+    height: 25px;
+    margin: 1rem auto;
 }
 
-.actions {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+
+.error-msg {
+    color: yellow;
+    display: none;
 }
 
-button,
-.selectLanguage {
-    padding: 1rem 2rem;
-    margin: 0.5rem 0;
-    background: var(--background);
-    border: none;
+button {
+    padding: 0.5rem 2rem;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-family: var(--font);
+    font-weight: 700;
     cursor: pointer;
 }
-.selectLanguage {
-    background: linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
+
+table, th, td {
+    border: 1px solid white;
+    padding: 0.5rem;
 }
 
-.translate-output {
-    width: 100%;
-    height: 100px;
-    border: 2px solid black;
-    overflow: scroll;
-    padding: 1rem;
+table {
+    display: none;
 }
-
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: fit-content;
-    background: var(--background);
-    text-align: center;
-}
-footer > * {
-    width: var(--width-laptop);
-    margin: 0.5rem auto;
-
-}
-.footer--about {
-    font-size: 2rem;
-    font-family: 'Style Script', cursive;
-    letter-spacing: 1rem;
-}
-
 
 @media (max-width:850px) {
-
-
-    main,
-    footer > * {
-        width: var(--width-mobile);
+    body {
+        background: #29539b;
     }
 
-    footer {
-    position: static;
+    main{
+        height: auto;
+    }
+
+    .card,
+    table {
+        width: 90vw;
     }
 }

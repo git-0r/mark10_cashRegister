@@ -5,43 +5,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minion Speak</title>
+    <title>Cash Register</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Fun Translations</h1>
-    </header>
 
     <main>
-        <textarea class="translate-input" name="" id="" cols="30" rows="6"
-            placeholder="Enter english text here"></textarea>
 
-        <div class="actions">
-            <label for="selectLanguage">Select Language:</label>
-            <select class="selectLanguage" name="selectLanguage" id="selectLanguage">
+        <div class="card">
+            <h1>Cash Register</h1>
 
-                <option value="mandalorian">Mandalorian</option>
-                <option value="yoda">Yoda</option>
-                <option value="norfolk">Norfolk</option>
-                <option value="groot">groot</option>
-                <option value="klingon">Klingon</option>
-            </select>
+            <div class="bill-amount">
+                <label for="bill-amount">Enter Bill Amount: </label>
+                <input type="number" id="bill-amount" min="1">
+                <button class="btn-next">Next</button>
+            </div>
 
-            <button class="translateBtn">Translate</button>
-            <img src="images/baby-yoda-star-wars.gif" class="yoda">
+            <div class="cash-received">
+                <label for="cash-received">Enter Cash Received: </label>
+                <input type="number" id="cash-received" min="1">
+                <button class="btn-check">Check</button>
+            </div>
+            <p class="error-msg"></p>
         </div>
+        <table>
+            <tr>
+                <th>No. of Notes</th>
+                <td class="number-of-notes"></td>
+                <td class="number-of-notes"></td>
+                <td class="number-of-notes"></td>
+                <td class="number-of-notes"></td>
+                <td class="number-of-notes"></td>
+                <td class="number-of-notes"></td>
+                <td class="number-of-notes"></td>
+            </tr>
+            <tr>
+                <th>Note</th>
+                <td>2000</td>
+                <td>500</td>
+                <td>100</td>
+                <td>20</td>
+                <td>10</td>
+                <td>5</td>
+                <td>1</td>
+            </tr>
+        </table>
 
-        <p>translation will come here 👇</p>
-        <div class="translate-output"></div>
+        <p>Enter the bill amount and cash given by the customer and know minimum number of notes to return.</p>
     </main>
-
-    <footer>
-        <p class="footer--about">about</p>
-        <p>Use this translator to convert your text from English to Mandalorian, Yoda, Norfolk, Groot and Klingon.</p>
-        <p>Made with <a href="https://funtranslations.com/api/" target="_blank">Fun Translations API</a></p>
-    </footer>
 
 
     <script src="app.js"></script>
